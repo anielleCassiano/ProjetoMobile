@@ -1,7 +1,6 @@
 import unittest
 from pages.SplashScreenPage import SplashScreenPage
 
-
 class SplashScreenTest(unittest.TestCase):
     def setUp(self) -> None:
         self.texto_titulo = 'Olá, visitante.'
@@ -11,10 +10,4 @@ class SplashScreenTest(unittest.TestCase):
         self.titulo = self.ssp.acessar_SplashScreen()
         assert self.titulo == self.texto_titulo
         self.ssp.page.close()
-
-'''
-if __name__ == '__main__':
-    unittest.main()
-'''
-
 

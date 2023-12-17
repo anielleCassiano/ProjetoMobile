@@ -2,8 +2,7 @@ from appium import webdriver
 from appium.options.common.base import AppiumOptions
 from selenium.webdriver.support.wait import WebDriverWait
 
-
-class PageObject():
+class PageObject:
 
     def __init__(self) -> None:
         options = AppiumOptions()
@@ -26,7 +25,3 @@ class PageObject():
 
     def close(self):
         self.driver.quit()
-
-
-
-
