@@ -3,8 +3,7 @@ from appium.options.common.base import AppiumOptions
 
 
 def get_driver() -> webdriver:
-    desired_capabilities = dict(
-        {
+    desired_capabilities: dict[str, str] = {
             "platformName": "Android",
             "appium:automationName": "UiAutomator2",
             "appium:appPackage": "br.com.brmalls.customer.amazonasshopping",
@@ -14,8 +13,8 @@ def get_driver() -> webdriver:
             "appium:newCommandTimeout": 3600,
             "appium:connectHardwareKeyboard": True,
             "appium:autoGrantPermissions": True,
-        }
-    )
+    }
+
     options = AppiumOptions()
     options.load_capabilities(desired_capabilities)
     driver = webdriver.Remote(command_executor="http://localhost:4723", options=options)
