@@ -24,7 +24,7 @@ class SearchPageTest(unittest.TestCase):
         assert len(movies) > 0
 
     def test_check_movie_exhibition_date(self):
-        week_days: list[str] = ["Hoje", "Seg", "Ter", "Qua", "Qui", "Set", "Sab", "Dom"]
+        week_days: list[str] = ["Hoje", "Seg", "Ter", "Qua", "Qui", "Sex", "Set", "Sab", "Dom"]
         self.welcome_page.skip_welcome()
         self.home_page.accept_cookies()
         self.home_page.open_bottom_menu()
